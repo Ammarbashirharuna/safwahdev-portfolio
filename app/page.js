@@ -1,4 +1,7 @@
 import Image from "next/image";
+import { FaGlobe, FaMobile } from "react-icons/fa";
+import { TbDeviceMobileCode } from "react-icons/tb";
+import { BsCloudCheckFill } from "react-icons/bs";
 
 export default function Home() {
   return (
@@ -51,21 +54,21 @@ export default function Home() {
           </p> */}
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
-            <div className="p-10 border-4 border-white rounded-lg bg-black">
-              <h3 className="text-2xl font-semibold mb-4 text-white">Our Mission</h3>
-              <p className="text-lg text-white">
+            <div className="p-6 border-4 border-white rounded-lg bg-black">
+              <h3 className="text-3xl font-semibold mb-4 text-white">Our Mission</h3>
+              <p>
                 To drive technological advancement by delivering custom software that meets the unique needs of our clients.
               </p>
             </div>
-            <div className="p-10 border-4 border-white rounded-lg bg-black">
-              <h3 className="text-2xl font-semibold mb-4 text-white">Our Values</h3>
-              <p className="text-lg text-white">
+            <div className="p-6 border-4 border-white rounded-lg bg-black">
+              <h3 className="text-3xl font-semibold mb-4 text-white">Our Values</h3>
+              <p className="">
                 Innovation, integrity, and excellence are at the core of everything we do. We believe in creating value through our work.
               </p>
             </div>
-            <div className="p-10 border-4 border-white rounded-lg bg-black">
-              <h3 className="text-2xl font-semibold mb-4 text-white">Our Approach</h3>
-              <p className="text-lg text-white">
+            <div className="p-6 border-4 border-white rounded-lg bg-black">
+              <h3 className="text-3xl font-semibold mb-4 text-white">Our Approach</h3>
+              <p className="">
                 We collaborate closely with our clients, understanding their challenges and delivering tailored solutions that drive success.
               </p>
             </div>
@@ -77,85 +80,45 @@ export default function Home() {
         <section className="my-16 text-center">
           <h2 className="text-4xl font-bold mb-12">Our Services</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
-            <div className="relative overflow-hidden rounded-lg bg-[linear-gradient(96deg,rgb(0,48,143)_0%,rgb(0,255,255)_100%)] text-white text-center shadow-lg transform transition duration-300 hover:scale-105">
+            <div className="relative overflow-hidden rounded-xl bg-[linear-gradient(200deg,rgb(255,66,221)_0%,rgb(121,0,174)_100%)] text-white text-center shadow-lg transform transition duration-300 hover:scale-105">
               <div className="absolute inset-0 bg-black opacity-40"></div>
-              <div className="relative p-8 z-10">
-                <div className="mb-6">
+              <div className="relative p-8 z-10 grid place-content-center">
+                <div className="mb-6 text-center text-[5rem] grid place-content-center">
                   {/* Replace with your icon */}
-                  <svg
-                    className="w-12 h-12 mx-auto mb-4 text-white"
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M3 7v10c0 1.1.9 2 2 2h14a2 2 0 002-2V7m-4 10V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v12m0-4h4"
-                    />
-                  </svg>
+                  <FaGlobe />
                 </div>
                 <h3 className="text-2xl font-semibold mb-4">Web Development</h3>
-                <p className="text-lg">
+                {/* <p className="text-lg">
                   Building responsive and scalable web applications that drive business
                   growth and user engagement.
-                </p>
+                </p> */}
               </div>
             </div>
-            <div className="relative overflow-hidden rounded-lg bg-[linear-gradient(96deg,rgb(0,48,143)_0%,rgb(0,255,255)_100%)] text-white text-center shadow-lg transform transition duration-300 hover:scale-105">
+            <div className="relative overflow-hidden rounded-xl bg-[linear-gradient(200deg,rgb(255,66,221)_0%,rgb(121,0,174)_100%)] text-white text-center shadow-lg transform transition duration-300 hover:scale-105">
               <div className="absolute inset-0 bg-black opacity-40"></div>
-              <div className="relative p-8 z-10">
-                <div className="mb-6">
+              <div className="relative p-8 z-10 grid place-content-center">
+                <div className="mb-6 text-center text-[5rem] grid place-content-center">
                   {/* Replace with your icon */}
-                  <svg
-                    className="w-12 h-12 mx-auto mb-4 text-white"
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M12 8c1.1 0 2 .9 2 2v4m-4 0V10a2 2 0 012-2m0-3.5C8.2 4.5 6 7.7 6 11m12 0c0-3.3-2.2-6.5-6-7.5"
-                    />
-                  </svg>
+                  <FaMobile />
                 </div>
                 <h3 className="text-2xl font-semibold mb-4">Mobile App Development</h3>
-                <p className="text-lg">
+                {/* <p className="text-lg">
                   Creating seamless and user-friendly mobile experiences on iOS and
                   Android that engage users on the go.
-                </p>
+                </p> */}
               </div>
             </div>
-            <div className="relative overflow-hidden rounded-lg bg-[linear-gradient(96deg,rgb(0,48,143)_0%,rgb(0,255,255)_100%)] text-white text-center shadow-lg transform transition duration-300 hover:scale-105">
+            <div className="relative overflow-hidden rounded-xl bg-[linear-gradient(200deg,rgb(255,66,221)_0%,rgb(121,0,174)_100%)] text-white text-center shadow-lg transform transition duration-300 hover:scale-105">
               <div className="absolute inset-0 bg-black opacity-40"></div>
-              <div className="relative p-8 z-10">
-                <div className="mb-6">
-                  {/* Replace with your icon */}
-                  <svg
-                    className="w-12 h-12 mx-auto mb-4 text-white"
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M12 8c1.1 0 2 .9 2 2v4m-4 0V10a2 2 0 012-2m0-3.5C8.2 4.5 6 7.7 6 11m12 0c0-3.3-2.2-6.5-6-7.5"
-                    />
-                  </svg>
+              <div className="relative p-8 z-10 grid place-content-center">
+                <div className="mb-6 text-center text-[5rem] grid place-content-center">
+                  <BsCloudCheckFill />
                 </div>
                 <h3 className="text-2xl font-semibold mb-4">Cloud Solutions</h3>
-                <p className="text-lg">
+                {/* <p className="text-lg">
                   Leveraging the power of cloud computing to create scalable, reliable,
                   and secure solutions for businesses.
-                </p>
+                </p> */}
               </div>
             </div>
           </div>
