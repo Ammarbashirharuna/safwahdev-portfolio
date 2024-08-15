@@ -1,19 +1,18 @@
 import Image from "next/image";
 
 export default function Home() {
-  // bg-gradient-to-r from-cyan-500 via-blue-500 to-indigo-600
   return (
     <main className="bg-black">
       <article className="flex min-h-screen flex-col items-center justify-between max-w-[80vw] my-0 mx-[auto] text-white">
         <nav className="w-full flex items-center justify-between p-4">
           <div className="flex items-center gap-2">
             <Image
-              src={`/logo-removebg-preview.png`} // Replace with your logo path
+              src={`/logo-safwah.png`} // Replace with your logo path
               alt="logo"
               width={50}
               height={50}
             />
-            <span className="text-blue-400">safwahdev</span>
+            <span className="text-lg">safwahdev</span>
           </div>
           <ul className="flex space-x-8">
             <li className="hover:text-gray-300 cursor-pointer">Home</li>
@@ -24,39 +23,149 @@ export default function Home() {
         </nav>
 
         {/* Hero Section */}
-        <section className=" min-h-[80vh] flex flex-col items-center justify-center text-center">
-          <h1 className="text-[4rem] font-bold mb-6">Empowering Your Digital Future</h1>
-          <p className="text-xl mb-8">We build innovative software solutions tailored to your needs.</p>
-          <button className="bg-white text-cyan-500 font-semibold py-3 px-8 rounded-full hover:bg-gray-100 transition">Get Started</button>
+        <section className="relative min-h-[80vh] w-full flex flex-col items-center justify-center text-center">
+          <Image
+            src={`/bg.jpg`} // Replace with your background image path
+            alt="Background Image"
+            layout="fill"
+            objectFit="cover"
+            quality={100}
+            className="z-0"
+          />
+          <div className="absolute inset-0 bg-black opacity-30 z-10"></div>
+          <div className="relative z-20">
+            <h1 className="text-[4rem] font-bold mb-6">Empowering Your Digital Future</h1>
+            <p className="text-xl mb-8">We build innovative software solutions tailored to your needs.</p>
+            <button className="relative overflow-hidden bg-white text-black font-semibold py-4 px-10 rounded-lg transition-all duration-500 group">
+              <span className="relative z-10 group-hover:text-white transition-colors duration-500">Get Started</span>
+              <div className="absolute inset-0 bg-black w-full h-full transform -translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-out"></div>
+            </button>
+          </div>
         </section>
 
         {/* About Us Section */}
-        <section className="my-12">
-          <h2 className="text-4xl font-bold mb-4">About Us</h2>
-          <p className="text-xl mb-8">We are a team of passionate developers and designers committed to delivering top-notch software solutions.</p>
-        </section>
+        <section className="my-20 text-center">
+          {/* <h2 className="text-4xl font-bold mb-6">About Us</h2>
+          <p className="text-xl mb-8 max-w-3xl mx-auto">
+            We are a team of passionate developers, designers, and strategists dedicated to crafting innovative software solutions. Our mission is to empower businesses by transforming ideas into cutting-edge digital experiences.
+          </p> */}
 
-        {/* Services Section */}
-        <section className="my-12">
-          <h2 className="text-4xl font-bold mb-4">Our Services</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="p-6 bg-gray-800 rounded-lg text-center">
-              <h3 className="text-2xl font-semibold mb-2">Web Development</h3>
-              <p className="text-lg">Building responsive and scalable web applications.</p>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+            <div className="p-10 border-4 border-white rounded-lg bg-black">
+              <h3 className="text-2xl font-semibold mb-4 text-white">Our Mission</h3>
+              <p className="text-lg text-white">
+                To drive technological advancement by delivering custom software that meets the unique needs of our clients.
+              </p>
             </div>
-            <div className="p-6 bg-gray-800 rounded-lg text-center">
-              <h3 className="text-2xl font-semibold mb-2">Mobile App Development</h3>
-              <p className="text-lg">Creating seamless mobile experiences on iOS and Android.</p>
+            <div className="p-10 border-4 border-white rounded-lg bg-black">
+              <h3 className="text-2xl font-semibold mb-4 text-white">Our Values</h3>
+              <p className="text-lg text-white">
+                Innovation, integrity, and excellence are at the core of everything we do. We believe in creating value through our work.
+              </p>
             </div>
-            <div className="p-6 bg-gray-800 rounded-lg text-center">
-              <h3 className="text-2xl font-semibold mb-2">Cloud Solutions</h3>
-              <p className="text-lg">Leveraging cloud technologies for scalable solutions.</p>
+            <div className="p-10 border-4 border-white rounded-lg bg-black">
+              <h3 className="text-2xl font-semibold mb-4 text-white">Our Approach</h3>
+              <p className="text-lg text-white">
+                We collaborate closely with our clients, understanding their challenges and delivering tailored solutions that drive success.
+              </p>
             </div>
           </div>
         </section>
 
+
+        {/* Services Section */}
+        <section className="my-16 text-center">
+          <h2 className="text-4xl font-bold mb-12">Our Services</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+            <div className="relative overflow-hidden rounded-lg bg-[linear-gradient(96deg,rgb(0,48,143)_0%,rgb(0,255,255)_100%)] text-white text-center shadow-lg transform transition duration-300 hover:scale-105">
+              <div className="absolute inset-0 bg-black opacity-40"></div>
+              <div className="relative p-8 z-10">
+                <div className="mb-6">
+                  {/* Replace with your icon */}
+                  <svg
+                    className="w-12 h-12 mx-auto mb-4 text-white"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M3 7v10c0 1.1.9 2 2 2h14a2 2 0 002-2V7m-4 10V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v12m0-4h4"
+                    />
+                  </svg>
+                </div>
+                <h3 className="text-2xl font-semibold mb-4">Web Development</h3>
+                <p className="text-lg">
+                  Building responsive and scalable web applications that drive business
+                  growth and user engagement.
+                </p>
+              </div>
+            </div>
+            <div className="relative overflow-hidden rounded-lg bg-[linear-gradient(96deg,rgb(0,48,143)_0%,rgb(0,255,255)_100%)] text-white text-center shadow-lg transform transition duration-300 hover:scale-105">
+              <div className="absolute inset-0 bg-black opacity-40"></div>
+              <div className="relative p-8 z-10">
+                <div className="mb-6">
+                  {/* Replace with your icon */}
+                  <svg
+                    className="w-12 h-12 mx-auto mb-4 text-white"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M12 8c1.1 0 2 .9 2 2v4m-4 0V10a2 2 0 012-2m0-3.5C8.2 4.5 6 7.7 6 11m12 0c0-3.3-2.2-6.5-6-7.5"
+                    />
+                  </svg>
+                </div>
+                <h3 className="text-2xl font-semibold mb-4">Mobile App Development</h3>
+                <p className="text-lg">
+                  Creating seamless and user-friendly mobile experiences on iOS and
+                  Android that engage users on the go.
+                </p>
+              </div>
+            </div>
+            <div className="relative overflow-hidden rounded-lg bg-[linear-gradient(96deg,rgb(0,48,143)_0%,rgb(0,255,255)_100%)] text-white text-center shadow-lg transform transition duration-300 hover:scale-105">
+              <div className="absolute inset-0 bg-black opacity-40"></div>
+              <div className="relative p-8 z-10">
+                <div className="mb-6">
+                  {/* Replace with your icon */}
+                  <svg
+                    className="w-12 h-12 mx-auto mb-4 text-white"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M12 8c1.1 0 2 .9 2 2v4m-4 0V10a2 2 0 012-2m0-3.5C8.2 4.5 6 7.7 6 11m12 0c0-3.3-2.2-6.5-6-7.5"
+                    />
+                  </svg>
+                </div>
+                <h3 className="text-2xl font-semibold mb-4">Cloud Solutions</h3>
+                <p className="text-lg">
+                  Leveraging the power of cloud computing to create scalable, reliable,
+                  and secure solutions for businesses.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+
+
+
         {/* Portfolio Section */}
-        <section className="my-12">
+        {/* <section className="my-12">
           <h2 className="text-4xl font-bold mb-4">Our Work</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="rounded-lg">
@@ -69,10 +178,10 @@ export default function Home() {
               <Image src={"/cloud.jpg"} className="rounded-2xl" alt="Project 2" width={700} height={700} />
             </div>
           </div>
-        </section>
+        </section> */}
 
         {/* Testimonials Section */}
-        <section className="my-12">
+        {/* <section className="my-12">
           <h2 className="text-4xl font-bold mb-4">What Our Clients Say</h2>
           <div className="flex flex-col md:flex-row gap-4 justify-between">
             <blockquote className="md:w-1/3 bg-gray-800 p-6 rounded-lg">
@@ -88,14 +197,13 @@ export default function Home() {
               <footer className="mt-4">- Client Name, Company</footer>
             </blockquote>
           </div>
-        </section>
+        </section> */}
 
         {/* Footer */}
         <footer className="w-full py-12 text-center">
           © 2024 Your Company Name | <a href="#" className="text-cyan-500 hover:underline">Privacy Policy</a> | <a href="#" className="text-cyan-500 hover:underline">Terms of Service</a>
         </footer>
       </article>
-
     </main>
   );
 }
