@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { FaCode } from "react-icons/fa6";
+import { FaCheckCircle, FaArrowRight } from "react-icons/fa";
 import { CiGlobe } from "react-icons/ci";
 import { BsCloud, BsCloudLightning } from "react-icons/bs"
 import { RxCode } from "react-icons/rx";
@@ -52,33 +52,88 @@ export default function Home() {
               <div className="absolute inset-0 bg-black w-full h-full transform -translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-out"></div>
             </button>
           </div>
-        </section>
-
-        {/* About Us Section */}
-        {/* <section className="my-20 text-center">
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
-            <div className="p-6 border-4 border-white rounded-lg bg-black">
-              <h3 className="text-3xl font-semibold mb-4 text-white">Our Mission</h3>
-              <p>
-                To drive technological advancement by delivering custom software that meets the unique needs of our clients.
+        </section>        
+        
+        {/* How we approach projects Section */}
+        <section className="my-20 px-6 py-12 bg-black text-white">
+          <div className="container mx-auto flex flex-col lg:flex-row gap-12">
+            <div className="lg:w-1/2 lg:text-left">
+              <h2 className="text-5xl font-semibold mb-6">Our Approach</h2>
+              <p className="text-gray-300 leading-relaxed mb-6">
+                At our software development company, we believe that a successful project starts with a clear understanding of our client&quot;s needs and goals. Our approach is built on collaboration, transparency, and a commitment to delivering innovative solutions. We follow a structured process that includes thorough planning, agile development, continuous feedback, and rigorous testing. By integrating these practices, we ensure that each project is completed efficiently and meets the highest standards of quality.
               </p>
+              <ul className="list-none text-left text-gray-300 space-y-4">
+                <li className="flex items-center space-x-3">
+                  <FaCheckCircle className="text-green-400" />
+                  <span>Thorough planning and strategy</span>
+                </li>
+                <li className="flex items-center space-x-3">
+                  <FaCheckCircle className="text-green-400" />
+                  <span>Agile development for flexibility</span>
+                </li>
+                <li className="flex items-center space-x-3">
+                  <FaCheckCircle className="text-green-400" />
+                  <span>Continuous client feedback and iteration</span>
+                </li>
+                <li className="flex items-center space-x-3">
+                  <FaCheckCircle className="text-green-400" />
+                  <span>Rigorous testing and quality assurance</span>
+                </li>
+              </ul>
             </div>
-            <div className="p-6 border-4 border-white rounded-lg bg-black">
-              <h3 className="text-3xl font-semibold mb-4 text-white">Our Values</h3>
-              <p className="">
-                Innovation, integrity, and excellence are at the core of everything we do. We believe in creating value through our work.
-              </p>
-            </div>
-            <div className="p-6 border-4 border-white rounded-lg bg-black">
-              <h3 className="text-3xl font-semibold mb-4 text-white">Our Approach</h3>
-              <p className="">
-                We collaborate closely with our clients, understanding their challenges and delivering tailored solutions that drive success.
-              </p>
+
+            <div className="lg:w-1/2 grid grid-cols-1 md:grid-cols-2 gap-12">
+              <div className="relative rounded-lg overflow-hidden shadow-lg transition-transform transform hover:scale-105 hover:shadow-2xl duration-500">
+                <Image
+                  src="/pencil-paper.jpg"
+                  alt="Planning Image"
+                  layout="fill"
+                  objectFit="cover"
+                  className="w-full h-full"
+                />
+                <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 p-6">
+                  <h3 className="text-3xl font-bold text-white">Planning</h3>
+                </div>
+              </div>
+              <div className="relative rounded-lg overflow-hidden shadow-lg transition-transform transform hover:scale-105 hover:shadow-2xl duration-500">
+                <Image
+                  src="/coding.jpg"
+                  alt="Development Image"
+                  layout="fill"
+                  objectFit="cover"
+                  className="w-full h-full"
+                />
+                <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 p-6">
+                  <h3 className="text-3xl font-bold text-white">Development</h3>
+                </div>
+              </div>
+              <div className="relative rounded-lg overflow-hidden shadow-lg transition-transform transform hover:scale-105 hover:shadow-2xl duration-500">
+                <Image
+                  src="/feedback.png"
+                  alt="Feedback Image"
+                  layout="fill"
+                  objectFit="cover"
+                  className="w-full h-full"
+                />
+                <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 p-6">
+                  <h3 className="text-3xl font-bold text-white">Feedback</h3>
+                </div>
+              </div>
+              <div className="relative rounded-lg overflow-hidden shadow-lg transition-transform transform hover:scale-105 hover:shadow-2xl duration-500">
+                <Image
+                  src="/testing.jpg"
+                  alt="Testing Image"
+                  layout="fill"
+                  objectFit="cover"
+                  className="w-full h-full"
+                />
+                <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 p-6">
+                  <h3 className="text-3xl font-bold text-white">Testing</h3>
+                </div>
+              </div>
             </div>
           </div>
-        </section> */}
-
+        </section>
 
         {/* Services Section */}
         <section className="my-16 flex flex-col gap-10">
@@ -157,39 +212,174 @@ export default function Home() {
 
 
         {/* Portfolio Section */}
-        {/* <section className="my-12">
-          <h2 className="text-4xl font-bold mb-4">Our Work</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="rounded-lg">
-              <Image src={"/cloud.jpg"} className="rounded-2xl" alt="Project 1" width={700} height={700} />
-            </div>
-            <div className="rounded-lg">
-              <Image src={"/cloud.jpg"} className="rounded-2xl" alt="Project 2" width={700} height={700} />
-            </div>
-            <div className="rounded-lg">
-              <Image src={"/cloud.jpg"} className="rounded-2xl" alt="Project 2" width={700} height={700} />
+        <section className="my-20 px-6 py-12 bg-black text-white">
+          <div className="container mx-auto">
+            <h2 className="text-5xl font-semibold mb-6">Our Work</h2>
+            <p className="max-w-[50%] text-gray-300 mb-8">Services are professional offerings provided by businesses to meet specific needs or solve problems for their customers. Services can range from your budject.</p>
+            <div className="grid grid-cols-1 gap-8">
+
+              {/* First Row: Two cards with different widths */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div className="relative group col-span-1 rounded-lg overflow-hidden shadow-lg transition-transform transform hover:scale-105 hover:shadow-2xl duration-500">
+                  <Image
+                    src="https://picsum.photos/500"
+                    alt="Project 1"
+                    layout="responsive"
+                    width={800}
+                    height={500}
+                    className="object-cover"
+                  />
+                  <div className="absolute inset-0 bg-black bg-opacity-60 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-6">
+                    <h3 className="text-5xl font-semibold mb-4">Project 1</h3>
+                    <p className="mb-6">A brief description of Project 1.</p>
+                    <a href="#">
+                      <button className="relative overflow-hidden hover:bg-black hover:text-white bg-white text-black font-semibold py-4 px-6 transition-all duration-500 group">Case Study</button>
+                    </a>
+                  </div>
+                </div>
+                <div className="relative group col-span-1 rounded-lg overflow-hidden shadow-lg transition-transform transform hover:scale-105 hover:shadow-2xl duration-500">
+                  <Image
+                    src="https://picsum.photos/400"
+                    alt="Project 2"
+                    layout="responsive"
+                    width={500}
+                    height={500}
+                    className="object-cover"
+                  />
+                  <div className="absolute inset-0 bg-black bg-opacity-60 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-6">
+                    <h3 className="text-5xl font-semibold mb-4">Project 2</h3>
+                    <p className="mb-6">A brief description of Project 2.</p>
+                    <a href="#">
+                      <button className="relative overflow-hidden hover:bg-black hover:text-white bg-white text-black font-semibold py-4 px-6 transition-all duration-500 group">Case Study</button>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              {/* Second Row: Three cards with equal width */}
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div className="relative group rounded-lg overflow-hidden shadow-lg transition-transform transform hover:scale-105 hover:shadow-2xl duration-500">
+                  <Image
+                    src="https://picsum.photos/300"
+                    alt="Project 3"
+                    layout="responsive"
+                    width={700}
+                    height={500}
+                    className="object-cover"
+                  />
+                  <div className="absolute inset-0 bg-black bg-opacity-60 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-6">
+                    <h3 className="text-4xl font-semibold mb-4">Project 3</h3>
+                    <p className="mb-6">A brief description of Project 3.</p>
+                    <a href="#">
+                      <button className="relative overflow-hidden hover:bg-black hover:text-white bg-white text-black font-semibold py-4 px-6 transition-all duration-500 group">Case Study</button>
+                    </a>
+                  </div>
+                </div>
+                <div className="relative group rounded-lg overflow-hidden shadow-lg transition-transform transform hover:scale-105 hover:shadow-2xl duration-500">
+                  <Image
+                    src="https://picsum.photos/350"
+                    alt="Project 4"
+                    layout="responsive"
+                    width={700}
+                    height={500}
+                    className="object-cover"
+                  />
+                  <div className="absolute inset-0 bg-black bg-opacity-60 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-6">
+                    <h3 className="text-4xl font-semibold mb-4">Project 4</h3>
+                    <p className="mb-6">A brief description of Project 4.</p>
+                    <a href="#">
+                      <button className="relative overflow-hidden hover:bg-black hover:text-white bg-white text-black font-semibold py-4 px-6 transition-all duration-500 group">Case Study</button>
+                    </a>
+                  </div>
+                </div>
+                <div className="relative group rounded-lg overflow-hidden shadow-lg transition-transform transform hover:scale-105 hover:shadow-2xl duration-500">
+                  <Image
+                    src="https://picsum.photos/250"
+                    alt="Project 5"
+                    layout="responsive"
+                    width={700}
+                    height={500}
+                    className="object-cover"
+                  />
+                  <div className="absolute inset-0 bg-black bg-opacity-60 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-6">
+                    <h3 className="text-4xl font-semibold mb-4">Project 5</h3>
+                    <p className="mb-6">A brief description of Project 5.</p>
+                    <a href="#">
+                      <button className="relative overflow-hidden hover:bg-black hover:text-white bg-white text-black font-semibold py-4 px-6 transition-all duration-500 group">Case Study</button>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              {/* Third Row: Two cards with different sizes */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div className="relative group rounded-lg overflow-hidden shadow-lg transition-transform transform hover:scale-105 hover:shadow-2xl duration-500">
+                  <Image
+                    src="https://picsum.photos/500"
+                    alt="Project 6"
+                    layout="responsive"
+                    width={800}
+                    height={500}
+                    className="object-cover"
+                  />
+                  <div className="absolute inset-0 bg-black bg-opacity-60 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-6">
+                    <h3 className="text-5xl font-semibold mb-4">Project 6</h3>
+                    <p className="mb-6">A brief description of Project 6.</p>
+                    <a href="#">
+                      <button className="relative overflow-hidden hover:bg-black hover:text-white bg-white text-black font-semibold py-4 px-6 transition-all duration-500 group">Case Study</button>
+                    </a>
+                  </div>
+                </div>
+                <div className="relative group rounded-lg overflow-hidden shadow-lg transition-transform transform hover:scale-105 hover:shadow-2xl duration-500">
+                  <Image
+                    src="/cloud.jpg"
+                    alt="Project 7"
+                    layout="responsive"
+                    width={500}
+                    height={500}
+                    className="object-cover"
+                  />
+                  <div className="absolute inset-0 bg-black bg-opacity-60 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-6">
+                    <h3 className="text-5xl font-semibold mb-4">Project 7</h3>
+                    <p className="mb-6">A brief description of Project 7.</p>
+                    <a href="#">
+                      <button className="relative overflow-hidden hover:bg-black hover:text-white bg-white text-black font-semibold py-4 px-6 transition-all duration-500 group">Case Study</button>
+                    </a>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-        </section> */}
+        </section>
 
         {/* Testimonials Section */}
-        {/* <section className="my-12">
-          <h2 className="text-4xl font-bold mb-4">What Our Clients Say</h2>
-          <div className="flex flex-col md:flex-row gap-4 justify-between">
-            <blockquote className="md:w-1/3 bg-gray-800 p-6 rounded-lg">
-              <p>&quot;Their work exceeded our expectations and delivered outstanding results.&quot;</p>
-              <footer className="mt-4">- Client Name, Company</footer>
-            </blockquote>
-            <blockquote className="md:w-1/3 bg-gray-800 p-6 rounded-lg mt-4 md:mt-0">
-              <p>&quot;Professional, reliable, and highly skilled. Highly recommended!&quot;</p>
-              <footer className="mt-4">- Client Name, Company</footer>
-            </blockquote>
-            <blockquote className="md:w-1/3 bg-gray-800 p-6 rounded-lg mt-4 md:mt-0">
-              <p>&quot;Professional, reliable, and highly skilled. Highly recommended!&quot;</p>
-              <footer className="mt-4">- Client Name, Company</footer>
-            </blockquote>
+        <section className="my-20 px-6 py-12">
+          <div className="container mx-auto">
+            <h2 className="text-5xl font-semibold mb-6">Our Clients Said</h2>
+            <p className="max-w-[50%] text-gray-300 mb-8">Services are professional offerings provided by businesses to meet specific needs or solve problems for their customers. Services can range from your budject.</p>
+            <div className="flex flex-col md:flex-row gap-8 justify-between">
+              
+              {/* First Testimonial */}
+              <blockquote className="md:w-1/3 bg-gray-800 p-8 rounded-lg shadow-lg transition-transform transform hover:scale-105 duration-300">
+                <p className="text-lg italic mb-4">&quot;Their work exceeded our expectations and delivered outstanding results.&quot;</p>
+                <footer className="mt-6 text-right text-sm text-gray-400">- Client Name, Company</footer>
+              </blockquote>
+
+              {/* Second Testimonial */}
+              <blockquote className="md:w-1/3 bg-gray-800 p-8 rounded-lg shadow-lg mt-4 md:mt-0 transition-transform transform hover:scale-105 duration-300">
+                <p className="text-lg italic mb-4">&quot;Professional, reliable, and highly skilled. Highly recommended!&quot;</p>
+                <footer className="mt-6 text-right text-sm text-gray-400">- Client Name, Company</footer>
+              </blockquote>
+
+              {/* Third Testimonial */}
+              <blockquote className="md:w-1/3 bg-gray-800 p-8 rounded-lg shadow-lg mt-4 md:mt-0 transition-transform transform hover:scale-105 duration-300">
+                <p className="text-lg italic mb-4">&quot;A true partner in our success, delivering exceptional quality and service.&quot;</p>
+                <footer className="mt-6 text-right text-sm text-gray-400">- Client Name, Company</footer>
+              </blockquote>
+
+            </div>
           </div>
-        </section> */}
+        </section>
 
         {/* Footer */}
         <footer className="w-full py-12 text-center">
