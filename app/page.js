@@ -1,34 +1,106 @@
+'use client';
+
 import Image from "next/image";
+import { useState } from "react";
 import { FaCheckCircle, FaArrowRight } from "react-icons/fa";
 import { CiGlobe } from "react-icons/ci";
 import { BsCloud, BsCloudLightning } from "react-icons/bs"
 import { RxCode } from "react-icons/rx";
 
 export default function Home() {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
     <main className="bg-black">
       <article className="flex min-h-screen flex-col items-center justify-between max-w-[80vw] my-0 mx-[auto] text-white">
-        <nav className="w-full flex items-center justify-between p-4">
-          <div className="flex items-center gap-2">
-            <Image
-              // Replace with your logo path
-              src={`/logo-safwah.png`}
-              alt="logo"
-              width={50}
-              height={50}
-              style={{
-                maxWidth: "100%",
-                height: "auto"
-              }} />
-            <span className="text-lg">safwahdev</span>
-          </div>
-          <ul className="flex space-x-8">
-            <li className="hover:text-gray-300 cursor-pointer">Home</li>
-            <li className="hover:text-gray-300 cursor-pointer">Features</li>
-            <li className="hover:text-gray-300 cursor-pointer">Pricing</li>
-            <li className="hover:text-gray-300 cursor-pointer">Contact</li>
-          </ul>
-        </nav>
+      <nav className="w-full flex items-center justify-between p-4 bg-black text-white">
+      <div className="flex items-center gap-2">
+        <Image
+          src={`/logo-safwah.png`}
+          alt="logo"
+          width={50}
+          height={50}
+          style={{
+            maxWidth: "100%",
+            height: "auto",
+          }}
+        />
+        <span className="text-lg">safwahdev</span>
+      </div>
+      <div className="md:hidden">
+        <button
+          onClick={toggleMenu}
+          className="text-white focus:outline-none focus:ring-2 focus:ring-white"
+        >
+          {isOpen ? (
+            <svg
+              className="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M6 18L18 6M6 6l12 12"
+              />
+            </svg>
+          ) : (
+            <svg
+              className="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M4 6h16M4 12h16m-7 6h7"
+              />
+            </svg>
+          )}
+        </button>
+      </div>
+      <ul
+        className={`${
+          isOpen ? "block" : "hidden"
+        } md:flex space-y-4 md:space-y-0 md:space-x-8 absolute md:relative top-16 md:top-0 left-0 w-full md:w-auto bg-black md:bg-transparent z-50 p-4 md:p-0`}
+      >
+        <li className="hover:text-gray-300 cursor-pointer">
+          <a href="#approach" className="block md:inline" onClick={toggleMenu}>
+            Strategy
+          </a>
+        </li>
+        <li className="hover:text-gray-300 cursor-pointer">
+          <a href="#services" className="block md:inline" onClick={toggleMenu}>
+            Solutions
+          </a>
+        </li>
+        <li className="hover:text-gray-300 cursor-pointer">
+          <a href="#projects" className="block md:inline" onClick={toggleMenu}>
+            Projects
+          </a>
+        </li>
+        <li className="hover:text-gray-300 cursor-pointer">
+          <a
+            href="#testimonials"
+            className="block md:inline"
+            onClick={toggleMenu}
+          >
+            Testimonials
+          </a>
+        </li>
+      </ul>
+    </nav>
+
 
         {/* Hero Section */}
         <section className="relative min-h-[80vh] w-full flex flex-col items-center justify-center text-center">
@@ -55,7 +127,7 @@ export default function Home() {
         </section>        
         
         {/* How we approach projects Section */}
-        <section className="my-20 px-6 py-12 bg-black text-white">
+        <section id="approach" className="my-20 px-6 py-12 bg-black text-white">
           <div className="container mx-auto flex flex-col lg:flex-row gap-12">
             <div className="lg:w-1/2 lg:text-left">
               <h2 className="text-5xl font-semibold mb-6">Our Approach</h2>
@@ -136,7 +208,7 @@ export default function Home() {
         </section>
 
         {/* Services Section */}
-        <section className="my-16 flex flex-col gap-10">
+        <section id="services" className="my-16 flex flex-col gap-10">
           <h2 className="text-5xl font-bold">Our Solutions</h2>
           <p className="max-w-[50%] text-gray-300">Services are professional offerings provided by businesses to meet specific needs or solve problems for their customers. 
             Services can range from your budget.
@@ -209,10 +281,8 @@ export default function Home() {
           </div>
         </section>
 
-
-
         {/* Portfolio Section */}
-        <section className="my-20 px-6 py-12 bg-black text-white">
+        <section id="projects" className="my-20 px-6 py-12 bg-black text-white">
           <div className="container mx-auto">
             <h2 className="text-5xl font-semibold mb-6">Our Work</h2>
             <p className="max-w-[50%] text-gray-300 mb-8">Services are professional offerings provided by businesses to meet specific needs or solve problems for their customers. Services can range from your budject.</p>
@@ -353,7 +423,7 @@ export default function Home() {
         </section>
 
         {/* Testimonials Section */}
-        <section className="my-20 px-6 py-12">
+        <section id="testimonials" className="my-20 px-6 py-12">
           <div className="container mx-auto">
             <h2 className="text-5xl font-semibold mb-6">Our Clients Said</h2>
             <p className="max-w-[50%] text-gray-300 mb-8">Services are professional offerings provided by businesses to meet specific needs or solve problems for their customers. Services can range from your budject.</p>
@@ -381,9 +451,37 @@ export default function Home() {
           </div>
         </section>
 
+        {/* Contact Section */}
+        <section id="contact" className="my-20 px-6 py-12 bg-black text-white">
+          <div className="container mx-auto text-center">
+            <h2 className="text-5xl font-semibold mb-6">Get In Touch</h2>
+            <p className="max-w-[50%] mx-auto text-gray-300 mb-8">
+              Ready to start your project? Contact us today to discuss your needs and how we can help.
+            </p>
+            <button className="relative overflow-hidden bg-white text-black font-semibold py-4 px-10 transition-all duration-500 group">
+              <span className="relative z-10 group-hover:text-white transition-colors duration-500">Contact Us</span>
+              <div className="absolute inset-0 bg-black w-full h-full transform -translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-out"></div>
+            </button>
+          </div>
+        </section>
+
         {/* Footer */}
-        <footer className="w-full py-12 text-center">
-          © 2024 Your Company Name | <a href="#" className="text-cyan-500 hover:underline">Privacy Policy</a> | <a href="#" className="text-cyan-500 hover:underline">Terms of Service</a>
+        <footer className="bg-black text-white py-6">
+          <div className="container mx-auto flex flex-col md:flex-row justify-between items-center">
+            <div className="mb-4 md:mb-0">
+              <Image
+                src={`/logo-safwah.png`}
+                alt="logo"
+                width={50}
+                height={50}
+                style={{
+                  maxWidth: "100%",
+                  height: "auto",
+                }}
+              />
+            </div>
+            <p className="text-center text-gray-400">&copy; 2023 Safwahdev. All Rights Reserved.</p>
+          </div>
         </footer>
       </article>
     </main>
